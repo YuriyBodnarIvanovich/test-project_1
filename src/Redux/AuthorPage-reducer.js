@@ -1,7 +1,7 @@
 const MAIN_AUTHOR = 'MAIN_AUTHOR';
 const AUTHOR_DATA = 'AUTHOR_DATA';
 let initialState = {
-    author:'The Jackson 5',
+    author:'',
     dataAuthor:[]
 }
 

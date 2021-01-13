@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter,Route} from 'react-router-dom';
 import MainPage from "./components/MainPage/MainPage";
@@ -10,13 +9,11 @@ function App() {
       <div style={{backgroundColor:"#282c34",height:"1000px"}}>
           <BrowserRouter>
               <Route exact path={'/'}
-                     render={()=><MainPage/>}
-              />
+                     render={()=><MainPage/>}/>
               <Route  path={'/Author'}
                       render={()=><AuthorPage/>}/>
               <Route  path={'/Search'}
                       render={()=><SearchPage/>}/>
-
           </BrowserRouter>
       </div>
   );

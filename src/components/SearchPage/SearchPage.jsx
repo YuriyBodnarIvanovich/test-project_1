@@ -3,7 +3,6 @@ import SearchStyle from './SearchPage.module.css';
 import axios from "axios";
 import {useSelector,useDispatch} from "react-redux";
 import {NavLink} from "react-router-dom";
-import AuthorStyle from "../AuthorPage/AuthorPage.module.css";
 
 const SearchPage = () =>{
     const data = useSelector(state=>state.searchPage);
@@ -16,11 +15,7 @@ const SearchPage = () =>{
         dispatch({type:'SEARCH_TRACK',word:''});
         axios.get(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${data.searchWord}&api_key=5fc923c4394c17aa8d89fa3a1f44ee55&format=json`).then(async (response) => {
             let resData = response.data;
-            console.log("Get search!");
-            console.log(resData);
             await getData(resData)
-            console.log("Top Track from redux!");
-            console.log(data.topTrack);
         })
             .then(function (response) {
                 console.log(response);
@@ -46,15 +41,14 @@ const SearchPage = () =>{
         });
     }
 
-    console.log("word:" )
     return(
         <div className={SearchStyle.container}>
             <div className={SearchStyle.searchContainer}>
                 <img src="https://img.icons8.com/android/96/ffffff/search.png" onClick={run}/>
-                <textarea
+                <input
                     value={data.searchWord}
                     onChange={(event)=>{dispatch({type:'SEARCH_TRACK',word:event.target.value})}}>
-                </textarea>
+                </input>
             </div>
             <div className={SearchStyle.result}>
                 {searchData}
@@ -62,7 +56,6 @@ const SearchPage = () =>{
             <NavLink to={'/'} className={SearchStyle.backContainer}>
                 <button className={SearchStyle.back}>back</button>
             </NavLink>
-
         </div>
     )
 }

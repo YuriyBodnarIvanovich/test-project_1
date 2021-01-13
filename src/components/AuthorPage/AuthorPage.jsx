@@ -20,10 +20,7 @@ const AuthorPage = () =>{
     useEffect(() => {
         axios.get(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${data.author}&api_key=5fc923c4394c17aa8d89fa3a1f44ee55&format=json`).then(async (response) => {
             let resData = response.data;
-            console.log("Mac page");
-            console.log(resData);
             await getData(resData)
-
         });
     }, []);
 
@@ -33,7 +30,6 @@ const AuthorPage = () =>{
             <div className={AuthorStyle.loading}>
                 <p>load...</p>
             </div>
-
         )
     }else {
         const arrayOfTags = data.dataAuthor.tags.tag.map((element,index)=>{
@@ -59,7 +55,6 @@ const AuthorPage = () =>{
                         <button className={AuthorStyle.back}>back</button>
                     </NavLink>
                 </div>
-
             </div>
         )
     }
