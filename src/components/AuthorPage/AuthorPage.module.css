@@ -1,0 +1,57 @@
+.container{
+    background-color: #282c34;
+    width: 100%;
+    /*height: 800px;*/
+    display: grid;
+    grid-template-columns: 0.8fr;
+    color: white;
+    justify-content: center;
+    padding-top: 50px;
+}
+.container button{
+    width: 200px;
+    height: 50px;
+}
+.loading{
+    width: 100%;
+    padding-top: 340px;
+    display: grid;
+    grid-template-columns: 0.2fr;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.tags{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr;
+}
+.tag{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+}
+
+.containerForBack{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr;
+    justify-content: center;
+}
+
+.back{
+    width: 100px;
+    height: 60px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.back:hover{
+    cursor: pointer;
+}
+
+.summary{
+    font-size: 18px;
+}

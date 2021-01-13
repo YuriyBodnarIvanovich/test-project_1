@@ -1,0 +1,76 @@
+.container{
+    width: 100%;
+    background-color: #282c34;
+    display: grid;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    color: white;
+}
+
+.searchContainer{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    padding-top: 20px;
+}
+.searchContainer img:hover{
+    cursor: pointer;
+}
+
+.searchContainer img{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+.searchContainer textarea{
+    width: 100%;
+    min-width: 500px;
+    background-color: #282c34;
+    border:none;
+    border-bottom-style: solid;
+    border-color: white;
+    resize: none;
+    outline: none;
+    font-size: 50px;
+    color: white;
+}
+
+.resultItem{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+}
+
+.result{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.backContainer{
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 100px;
+    margin-bottom: 100px;
+
+}
+.back{
+    width: 100px;
+    height: 60px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    /*margin-top: 30px;*/
+
+}
+
+.back:hover{
+    cursor: pointer;
+}
